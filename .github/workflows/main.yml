@@ -4,8 +4,5 @@ jobs:
   update:
     runs-on: ubuntu-latest
     steps:
-      - name: DIsplay dir - testing
-        run: dir
-
       - name: Run update.py
-        run: python update.py
+        run: python scripts/update.py
