@@ -5,4 +5,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Run update.py
-        run: python ${{ github.workspace }}/scripts/update.py
+        run: dir ${{ github.workspace }}
