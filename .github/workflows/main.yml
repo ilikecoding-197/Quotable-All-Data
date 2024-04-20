@@ -5,4 +5,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Run update.py
-        run: dir ${{ github.workspace }}
+        run: dir ${{ github.workspace }} > dir.txt
