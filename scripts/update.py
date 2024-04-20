@@ -6,6 +6,10 @@ update.py - update quotes, authors, and tags.
 from requests import get
 from pprint import pprint
 import json
+from os.path import abspath, dirname
+
+# Go to the directory containing this file.
+os.chdir(dirname(abspath(__file__)))
 
 quotes_url = "https://api.quotable.io/quotes?limit=999" # URL for getting all quotes
 authors_url = "https://api.quotable.io/authors?limit=999" # URL for getting all authors
