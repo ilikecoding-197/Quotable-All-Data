@@ -3,6 +3,10 @@ on: [push]
 jobs:
   update:
     runs-on: ubuntu-latest
+    
+    permissions:
+      contents: write
+      
     steps:
       - name: checkout repo content
         uses: actions/checkout@v2 # checkout the repository content
@@ -19,3 +23,5 @@ jobs:
 
       - name: execute py script # run update script
         run: python scripts/update.py
+
+      - uses: stefanzweifel/git-auto-commit-action@v5
