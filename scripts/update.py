@@ -122,27 +122,14 @@ def main():
     # Get quotes.
     print("Getting quotes...")
     quotes = get_quotes() # Get quotes.
-
-    # Get the extra quotes.
-    with open("../extra/extra_quotes.json", mode="r") as f:
-        extra_quotes = json.load(f)
     
     # Get authors
     print("Getting authors...")
     authors = get_authors() # Get authors.
 
-    # Get the extra authors.
-    with open("../extra/extra_authors.json", mode="r") as f:
-        extra_authors = json.load(f)
-
     # Get tags
     print("Getting tags...")
     tags = get_tags() # Get tags.
-
-    # Get the extra tags.
-    with open("../extra/extra_tags.json", mode="r") as f:
-        extra_tags = json.load(f)
-
     
     # Get the old quote data.
     with open("../data/quotes.json", mode="r") as f:
