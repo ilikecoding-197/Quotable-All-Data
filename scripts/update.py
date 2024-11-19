@@ -29,7 +29,7 @@ def get_quotes():
 
     while page <= pages:
         # Get data from the quotable API.
-        data = get(quotes_url + f"&page={page}").json()
+        data = get(quotes_url + f"&page={page}", verify=False).json()
         if page == 1: # First page
             # Get the number of pages and update the pages variable.
             pages = data["totalPages"]
@@ -69,7 +69,7 @@ def get_authors():
 
     while page <= pages:
         # Get data from the quotable API.
-        data = get(authors_url + f"&page={page}").json()
+        data = get(authors_url + f"&page={page}", verify=False).json()
         if page == 1: # First page
             # Get the number of pages and update the pages variable.
             pages = data["totalPages"]
@@ -104,7 +104,7 @@ def get_tags():
     """
 
     # Get data from the quotable API.
-    data = get(tags_url).json()
+    data = get(tags_url, verify=False).json()
 
     # Return the tags.
     return {
